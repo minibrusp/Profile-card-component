@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+   --primary-DC: hsl(185, 75%, 39%);
+   --primary-VDDB: hsl(229, 23%, 23%);
+   --primary-DGB: hsl(227, 10%, 46%);
+   --neutral-DG: hsl(0, 0%, 59%);
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   position: relative;
+   font-size: 16px;
+   font-family: 'Kumbh Sans', sans-serif;
+   background-color: var(--primary-DC);
+   color: var(--primary-DGB);
+   display: flex;
+   flex-direction: column;
+   height: 95vh;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.card__container:hover {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.card__container:hover .card {
+   filter: brightness(0.3) blur(3px) grayscale(50%);
+}
+
+/* Add Friend Box */
+
+.card__container:hover .add__friend__box {
+   display: block;
+}
+
+.card__container:hover .add__friend__box:hover {
+   /* background-color: #fff; */
+   /* border-color: var(--primary-VDDB); */
+   border-color: #fff;
+}
+
+.card__container:hover .add__friend__box:hover span {
+   /* color: var(--primary-VDDB); */
+   color: #fff;
+   /* font-weight: 700; */
+}
+
+.add__friend__box {
+   display: none;
+   position: absolute;
+   border: 2px solid var(--primary-DC);
+   padding: 15px 20px;
+   z-index: 5;
+   border-radius: 15px;
+   cursor: pointer;
+   transition: .5s border;
+
+}
+
+.add__friend__box span {
+   color: var(--primary-DC);
+   /* font-weight: 700; */
+   letter-spacing: 2px;
+   transition: .5s color;
+}
+
+
+.card {
+   position: relative;
+   /* min-height: 60vh; */
+   min-height: 338px;
+   background-color: #fff;
+   /* margin: 20vh auto; */
+   width: 90vw;
+   /* min-width: 326px; */
+   border-radius: 15px;
+   transition: filter .5s;
+}
+
+
+.card__top {
+   height: 140px;
+   background-image: url(../images/bg-pattern-card.svg);
+   border-radius: 15px 15px 0 0;
+}
+
+.card__mid {
+   position: relative;
+   height: 146px;
+   border-bottom: 1px solid hsla(0, 0%, 59%, 0.333);
+}
+
+.personal__image {
+   position: absolute;
+   top: -55px;
+   width: 100%;
+   text-align: center;
+}
+
+.personal__image img {
+   border-radius: 50%;
+   border: 5px solid #fff;
+   width: 110px;
+}
+
+.personal__info {
+   text-align: center;
+   padding-top: 70px;
+   line-height: 1.5
+}
+
+.personal__info h1 {
+   display: inline;
+   font-size: 18px;
+   font-weight: 700;
+   color: var(--primary-VDDB);
+}
+
+.personal__info .age {
+   margin-left: 5px;
+}
+
+.personal__info .address {
+   font-size: 14px;
+   margin-top: 7px;
+}
+
+.card__bot {
+   height: 88px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.card__bot__items {
+   text-align: center;
+}
+
+.card__bot__items h2 {
+   margin-bottom: 3px;
+   font-size: 18px;
+   color: var(--primary-VDDB);
+}
+
+.card__bot__items span {
+   letter-spacing: 1px;
+   font-size: 10.5px;
+   line-height: 1;
+}
+
+
+/* footer  */
+
+footer {
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   letter-spacing: 1px;
+
+}
+
+.attribution {
+   font-size: 11px;
+   text-align: center;
+   color: white;
+}
+
+.attribution a {
+   color: hsl(228, 45%, 44%);
+   text-decoration: none;
+}
+
+.attribution a:hover {
+   background-color: #fff;
+   color: var(--primary-VDDB);
+}
