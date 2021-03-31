@@ -25,6 +25,13 @@ body {
    font-size: 16px;
    font-family: 'Kumbh Sans', sans-serif;
    background-color: var(--primary-DC);
+   background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+   background-repeat: no-repeat;
+   /* background-position: bottom 292px right 139px; */
+   /* background-position: top -370px right 170px, bottom -330px right -434px; */
+   /* background-position: top -344px right 187px; */
+   /* background-size: cover; */
+   background-position: right 36vw bottom 48vh, left 37vw top 47vh;
    color: var(--primary-DGB);
    display: flex;
    flex-direction: column;
@@ -86,6 +93,7 @@ body {
    position: relative;
    /* min-height: 60vh; */
    min-height: 338px;
+   max-width: 357px;
    background-color: #fff;
    /* margin: 20vh auto; */
    width: 90vw;
@@ -170,10 +178,12 @@ body {
 /* footer  */
 
 footer {
-   position: absolute;
-   bottom: 0;
+   position: fixed;
+   bottom: 0px;
    width: 100%;
    letter-spacing: 1px;
+   background-color: hsla(185deg, 70%, 28%, 22%);
+   padding: 10px;
 
 }
 
@@ -191,4 +201,23 @@ footer {
 .attribution a:hover {
    background-color: #fff;
    color: var(--primary-VDDB);
+}
+
+/* media queries  */
+@media (min-width: 48em) {
+   body {
+      background-position: right 42vw bottom 48vh, left 40vw top 47vh;
+   }
+}
+
+@media (min-width: 64em) {
+   body {
+      background-position: right 49.5vw bottom 34vh, left 42vw top 50vh;
+   }
+}
+
+@media (min-width: 90em) {
+   body {
+      background-position: right 52.5vw bottom 34vh, left 49vw top 50vh;
+   }
 }
